@@ -1,5 +1,6 @@
 mod day_1;
 mod day_2;
+mod day_3;
 mod utils;
 use std::env;
 
@@ -17,12 +18,16 @@ fn main() {
             println!("{}", day_1::part_2(&mut input));
         }
         2 => {
-            // convert to vector of ints
             let input: (String, String) = utils::day_2_read(&filename);
             let mine = input.0;
             let opponent = input.1;
             println!("{}", day_2::part_1(&mine, &opponent));
             println!("{}", day_2::part_2(&mine, &opponent));
+        }
+        3 => {
+            let input: Vec<String> = utils::day_3_read(&filename);
+            println!("{}", day_3::part_1(&input));
+            println!("{}", day_3::part_2(&input));
         }
         _ => (),
     }
