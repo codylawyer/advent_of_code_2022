@@ -67,3 +67,23 @@ pub fn day_3_read(filename: &str) -> Vec<String> {
     // return the rucksacks
     rucksacks
 }
+
+pub fn read_to_vec_string(filename: &str) -> Vec<String> {
+    // Open the file in read-only mode (ignoring errors).
+    let file = File::open(filename).unwrap();
+    let reader = BufReader::new(file);
+
+    // Initialize the vector
+    let mut input: Vec<String> = Vec::new();
+
+    // Read the file line by line using the lines() iterator from std::io::BufRead.
+    for line in reader.lines() {
+        let line = line.unwrap(); // Ignore errors.
+        if !line.is_empty() {
+            input.push(line);
+        }
+    }
+
+    // return the input
+    input
+}
