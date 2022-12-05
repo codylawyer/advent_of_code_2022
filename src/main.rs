@@ -2,6 +2,7 @@ mod day_1;
 mod day_2;
 mod day_3;
 mod day_4;
+mod day_5;
 mod utils;
 use std::env;
 
@@ -34,6 +35,11 @@ fn main() {
             let input: Vec<String> = utils::read_to_vec_string(&filename);
             println!("{}", day_4::part_1(&input));
             println!("{}", day_4::part_2(&input));
+        }
+        5 => {
+            let input: Vec<String> = utils::read_to_vec_string(&filename);
+            println!("{}", day_5::part_1(&input));
+            println!("{}", day_5::part_2(&input));
         }
         _ => (),
     }
