@@ -1,3 +1,4 @@
 /target
 *.lock
 /inputs
+/src/day_7.rs

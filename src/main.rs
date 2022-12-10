@@ -1,9 +1,12 @@
 mod day_1;
+mod day_10;
 mod day_2;
 mod day_3;
 mod day_4;
 mod day_5;
 mod day_6;
+mod day_8;
+mod day_9;
 mod utils;
 use std::env;
 
@@ -45,6 +48,21 @@ fn main() {
         6 => {
             day_6::part_1();
             day_6::part_2();
+        }
+        8 => {
+            let input: Vec<String> = utils::read_to_vec_string(&filename);
+            println!("{}", day_8::part_1(&input));
+            println!("{}", day_8::part_2(&input));
+        }
+        9 => {
+            let input: Vec<String> = utils::read_to_vec_string(&filename);
+            println!("{}", day_9::part_1(&input));
+            println!("{}", day_9::part_2(&input));
+        }
+        10 => {
+            let input: Vec<String> = utils::read_to_vec_string(&filename);
+            println!("{}", day_10::part_1(&input));
+            println!("{}", day_10::part_2(&input));
         }
         _ => (),
     }
