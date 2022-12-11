@@ -1,5 +1,6 @@
 mod day_1;
 mod day_10;
+mod day_11;
 mod day_2;
 mod day_3;
 mod day_4;
@@ -63,6 +64,11 @@ fn main() {
             let input: Vec<String> = utils::read_to_vec_string(&filename);
             println!("{}", day_10::part_1(&input));
             println!("{}", day_10::part_2(&input));
+        }
+        11 => {
+            let input: Vec<String> = utils::read_to_vec_string(&filename);
+            println!("{}", day_11::part_1(&input));
+            println!("{}", day_11::part_2(&input));
         }
         _ => (),
     }
